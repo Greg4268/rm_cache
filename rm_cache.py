@@ -2,7 +2,8 @@ import os
 import time 
 import shutil 
 
-cache_path = "/Users/jmnut/Library/Caches/"
+username = os.getlogin() 
+cache_path = f"/Users/{username}/Library/Caches/"
 dirs = [d for d in os.listdir(cache_path) if os.path.isdir(os.path.join(cache_path, d))]
 
 def run():
