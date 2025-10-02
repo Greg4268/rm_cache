@@ -2,6 +2,7 @@
 import os 
 import time 
 import shutil 
+import datetime 
 
 username = os.getlogin() 
 cache_path = f"/Users/{username}/Library/Caches/"
@@ -26,6 +27,8 @@ def run():
     for _dir in dirs:
         print(f"[ INFO ] removing directory: {_dir}/")
         remove(_dir)
+
+    print(f"Completed on: {datetime.datetime.now()}")
 
 def remove(_dir):
     full_path = os.path.join(cache_path, _dir)
